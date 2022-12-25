@@ -5,6 +5,7 @@ import './style.css'
 function App() {
   const [todo,setTodo] = useState("")
   const [todos,setTodos] = useState([])
+ 
   return (
     <div className="app">
       <div className="mainHeading">
@@ -29,15 +30,15 @@ function App() {
               if(obj2.id===obj.id){
                 obj.checked = !obj.status;
                 obj.status = obj.checked
-                console.log("checked",obj2.id)
-                console.log(obj2.status)
               }
               return obj2
             }))}} name="" id="" />
             <p>{obj.text}</p>
           </div>
           <div className="right">
-            <i className="fas fa-times"></i>
+            <i className="fas fa-times" onClick={()=>{
+              setTodos(todos.filter(obj4=>obj4.id!==obj.id))
+            }} ></i>
           </div>
         </div>
        
@@ -46,13 +47,10 @@ function App() {
 
         )
       })}
-      <div className="div">
-
-      <h1>activetask</h1>
-     {todos.map(obj3=> checked && <h2> todos.text </h2>)}
     </div>
 
-    </div>
+     
+
   );
 }
 
