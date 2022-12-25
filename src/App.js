@@ -18,8 +18,7 @@ function App() {
       <div className="input">
         <input value={todo} onChange={(event)=>{setTodo(event.target.value)}} type="text" placeholder="🖊️ Add item..." />
         <i className="fas fa-plus" onClick={()=>{
-          setTodos([...todos,{text:todo,id:Date.now(),status:false}])
-          console.log("itemadded")}}></i>
+          setTodos([...todos,{text:todo,id:Date.now(),status:false}])}}></i>
       </div>
       {todos.map((obj,index)=>{
         return(
