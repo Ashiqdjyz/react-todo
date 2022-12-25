@@ -21,11 +21,7 @@ function App() {
         <h2>Whoop, it's Wednesday 🌝 ☕ </h2>
       </div>
       </Col>
-      <Col md={12}>
-      <div>
-        <h3>some conetentewjafjdfjfja fskfjakjfsjfkaskfjasjdfaj</h3>
-      </div>
-        </Col>
+      
         </Row>
       <div className="input">
         <input value={todo} onChange={(event)=>{setTodo(event.target.value)}} type="text" placeholder="🖊️ Add item..." />
