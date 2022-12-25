@@ -1,20 +1,32 @@
 import React,{useState} from 'react';
 import './App.css';
 import './style.css'
+import {Col, Container, Row} from 'react-bootstrap';
+
 
 function App() {
   const [todo,setTodo] = useState("")
   const [todos,setTodos] = useState([])
  
   return (
+    <Container>
     <div className="app">
       <div className="mainHeading">
         <h1>ToDo List</h1>
       </div>
+      <Row>
+        <Col md={4}>
       <div className="subHeading">
         <br />
         <h2>Whoop, it's Wednesday 🌝 ☕ </h2>
       </div>
+      </Col>
+      <Col md={12}>
+      <div>
+        <h3>some conetentewjafjdfjfja fskfjakjfsjfkaskfjasjdfaj</h3>
+      </div>
+        </Col>
+        </Row>
       <div className="input">
         <input value={todo} onChange={(event)=>{setTodo(event.target.value)}} type="text" placeholder="🖊️ Add item..." />
         <i className="fas fa-plus" onClick={()=>{
@@ -47,8 +59,7 @@ function App() {
         )
       })}
     </div>
-
-     
+    </Container>
 
   );
 }
